@@ -12,4 +12,14 @@
  *
  *= require_tree .
  *= require_self
+ *= bootstrap.min
  */
+
+body {padding-top: 50px;}
+.starter-template {padding: 40px 15px;text-align: center;}
+.clear_with_height{clear: both;height: 20px;}
+.resize_none{resize: none;}
+.mrgn_lft_16{margin-left: 16%;}
+.txt_align_lft{text-align: left;}
+#nested_fields label{float: left;width: 17%;text-align: left;font-weight: normal;}
+#nested_fields input{float: right;}

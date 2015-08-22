@@ -1,5 +1,5 @@
 <h1>Listing users</h1>
-<table>
+<table class="table table-bordered table-responsive">
   <thead>
     <tr>
       <th>Name</th>
@@ -10,9 +10,9 @@
 
   <tbody>
     <% @users.each do |user| %>
+    <% if user.project.present? %>
       <tr>
-        <td><%= user.project.present? ? user.name: '' %></td>
-
+        <td><%= user.name %></td>
         <td>
           <% user.project.each do |proj|  %>
             <%= proj.name %>
@@ -21,9 +21,9 @@
         <td><%= user.project_description %></td>
       </tr>
     <% end %>
+    <% end %>
   </tbody>
 </table>
 
 <br>
-
 <%= link_to 'New User', new_user_path %>
