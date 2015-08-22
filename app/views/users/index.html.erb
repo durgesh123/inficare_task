@@ -1,0 +1,29 @@
+<h1>Listing users</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Project</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.project.present? ? user.name: '' %></td>
+
+        <td>
+          <% user.project.each do |proj|  %>
+            <%= proj.name %>
+          <% end %>
+        </td>
+        <td><%= user.project_description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails inficare_task: development" uuid="f3e2906e-9c28-4e73-8321-fee12f7527df">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails inficare_task: test" uuid="5612bc58-8528-4881-a16f-09e18e51cfa1">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails inficare_task: production" uuid="8d0063a2-0a04-4cd8-9026-9c4ab10081ad">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails inficare_task: default" uuid="7bc7204a-e192-4a5c-8311-696535660503">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails sm_rc73: development" uuid="3ae58dfd-400e-411f-a7c1-498e55cc8d91">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails sm_rc73: test" uuid="b9d66f3d-f287-49dd-8d64-0002b5ef2f0b">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails sm_rc73: production" uuid="ef7a518b-2d66-4ee7-8c71-c288ec7387a3">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

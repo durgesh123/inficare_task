@@ -1,0 +1,16 @@
+<%= simple_form_for(@user) do |f| %>
+    <div class="field">
+      <%= f.input :name, as: :select, collection: User.all.map(&:name), prompt: 'Select User' %><br>
+
+    </div>
+    <%= f.simple_fields_for :projects do |project_form| %>
+        <%= project_form.input :name, as: :select, collection: Project.all.map(&:name), include_blank: false, input_html: {multiple: true}%>
+    <% end %>
+    <br>
+
+    <%= f.input :project_description, as: :text %><br>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
