@@ -1,10 +1,10 @@
-<h1>Listing users</h1>
-<table class="table table-bordered table-responsive">
+<div class='alert dash_board'>User Project Dashboard</div>
+<table class='table table-bordered table-responsive'>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Project</th>
-      <th>Description</th>
+      <th><%= label_tag :user_name, 'User Name'%></th>
+      <th><%= label_tag :user_project, 'User Projects'%></th>
+      <th><%= label_tag :project_description, 'Project Description'%></th>
     </tr>
   </thead>
 
@@ -24,6 +24,5 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-<%= link_to 'New User', new_user_path %>
+<div class='clear_with_height'></div>
+<%= link_to 'Assign Project', new_user_path, class: 'btn btn-primary' %>

@@ -1,25 +1,38 @@
 <%= simple_form_for(@user) do |f| %>
-    <div class="panel panel-default">
-      <div class="panel-heading txt_align_lft">Assign User With Project</div>
-      <div class="panel-body">
+    <div class='panel panel-default'>
+      <div class='panel-heading txt_align_lft'>Assign User With Project</div>
+      <div class='panel-body'>
+        <div id='display_error' class='alert alert-danger collapse'></div>
+        <div class='clear_with_height'></div>
         <div class='col-xs-10' id='nested_fields'>
-          <%= f.input :name, as: :select, collection: User.all.map(&:name), prompt: 'Select User',
+          <%= f.input :name, as: :select, collection: fetch_all_user, prompt: 'Select User',
                       input_html: {class: 'form-control col-xs-5'}, label: 'User Name' %>
           <div class='clear_with_height'></div>
           <%= f.simple_fields_for :projects do |project_form| %>
-              <%= project_form.input :name, as: :select, collection: Project.all.map(&:name), label: 'Select Project',
+              <%= project_form.input :name, as: :select, collection: fetch_all_project, label: 'Select Project',
                                      include_blank: false, input_html: {multiple: true, class: 'form-control col-xs-5'}
               %>
+              <div class='clear_with_height_5'></div>
+              <span class='label label-default mrgn_rgt_36'>You can also select multiple project for same user.</span>
           <% end %>
           <div class='clear_with_height'></div>
           <%= f.input :project_description, as: :text, label: 'Project  Description',
                       input_html: {class: 'form-control col-xs-5 resize_none'} %><br>
           <div class='clear_with_height'></div>
           <div class='col-xs-5 mrgn_lft_16'>
-            <%= f.submit class: 'btn btn-primary pull-left' %>
+            <%= f.submit class: 'btn btn-primary pull-left', id: 'assign_project', value: 'Assign Project' %>
             <%= link_to 'Back', users_path, class: 'btn btn-primary' %>
           </div>
         </div>
       </div>
     </div>
 <% end %>
+
+<script>
+  $('#assign_project').click(function(){
+     if ($('#user_name :selected').val() == ''){
+         $('#display_error').show().html('Please Select User Name and Project');
+         return false;
+     }
+  });
+</script>

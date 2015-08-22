@@ -18,8 +18,11 @@
 body {padding-top: 50px;}
 .starter-template {padding: 40px 15px;text-align: center;}
 .clear_with_height{clear: both;height: 20px;}
+.clear_with_height_5{clear: both;height: 5px;}
 .resize_none{resize: none;}
 .mrgn_lft_16{margin-left: 16%;}
+.mrgn_rgt_36{margin-right: 36%;}
 .txt_align_lft{text-align: left;}
+.dash_board{color: whitesmoke;background-color: gray;border-color: #d6e9c6;font-weight: bold;}
 #nested_fields label{float: left;width: 17%;text-align: left;font-weight: normal;}
 #nested_fields input{float: right;}
